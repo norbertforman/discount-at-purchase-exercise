@@ -1,7 +1,7 @@
 class DiscountPromotion < PromotionalRules
     private
       def perform_rule!(item)
-        percent = 1.0 - (@discount.to_f / 100.0)
+        percent = 1.0 - (@discount / 100.0)
         item.price = item.price * percent
       end
 

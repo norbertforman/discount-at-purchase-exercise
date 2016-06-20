@@ -1,6 +1,6 @@
 class PromotionalRules
   def initialize(discount, productCode = nil)
-    @discount = discount
+    @discount = discount.to_f
     @productCode = productCode
   end
 
