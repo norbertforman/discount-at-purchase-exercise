@@ -1,4 +1,4 @@
-class CustomError < StandardError
+class InvalidItemError < StandardError
   attr_reader :message
 
   def initialize(message)

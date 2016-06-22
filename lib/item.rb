@@ -14,8 +14,8 @@ class Item
 
   private
     def check_data_valid
-      raise CustomError, 'product code must be a string' if !@productCode.instance_of?(String)
-      raise CustomError, 'name must be a string' if !@name.instance_of?(String)
-      raise CustomError, 'price is not a float number' if @price.to_f != @price
+      raise InvalidItemError, 'product code must be a string' if !@productCode.instance_of?(String)
+      raise InvalidItemError, 'name must be a string' if !@name.instance_of?(String)
+      raise InvalidItemError, 'price is not a float number' if @price.to_f != @price
     end
 end

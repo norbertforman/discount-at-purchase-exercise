@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'helper_spec'
 
 describe Checkout do
   before(:each) do
@@ -20,7 +20,7 @@ describe Checkout do
     end
     it 'incorrect price' do
       item = Item.new('001', 'Travel Card Holder', '9.25')
-      expect { @checkout.scan(item) }.to raise_error(CustomError)
+      expect { @checkout.scan(item) }.to raise_error(InvalidItemError)
     end
   end
 
