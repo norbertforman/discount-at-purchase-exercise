@@ -1,5 +1,5 @@
 class Checkout
-  def initialize(promotional_rules)
+  def initialize(promotional_rules = [])
     @promotional_rules = promotional_rules
     @items = []
   end

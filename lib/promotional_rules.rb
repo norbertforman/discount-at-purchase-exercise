@@ -5,8 +5,9 @@ class PromotionalRules
   end
 
   def apply!(items)
-    if apply?(items)
-      items_with_rules(items).map do |item|
+    rule_items = items_with_rules(items)
+    if apply?(rule_items)
+      rule_items.map do |item|
         perform_rule!(item)
       end
     end

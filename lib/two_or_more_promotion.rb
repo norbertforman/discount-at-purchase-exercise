@@ -5,6 +5,6 @@ class TwoOrMorePromotion < PromotionalRules
     end
 
     def apply?(items)
-      return items.size > 2
+      return items.size >= 2
     end
 end
